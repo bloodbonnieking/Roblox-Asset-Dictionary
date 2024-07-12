@@ -20,3 +20,4 @@ ImageLabelDictionary: contains image labels <br/>
 ImageButtonDictionary: contains image buttons <br/> 
 ShirtDictionary: contains shirts <br/>
 PantsDictionary: contains pants <br/>
+ParticleDictionary: contains particle emitters
