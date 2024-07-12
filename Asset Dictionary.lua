@@ -13,6 +13,7 @@ ModuleDictionary.Dictionaries = {
 	ImageButtonDictionary = {};
 	ShirtDictionary = {};
 	PantsDictionary = {};
+	ParticleDictionary = {}
 }
 local Dictionaries = ModuleDictionary.Dictionaries
 
@@ -61,6 +62,10 @@ local function AddToTable(Target, Print)
 			["Pants"] = function ()
 				table.insert(Dictionaries.PantsDictionary, Target[index].PantsTemplate)
 				table.insert(Dictionaries.GeneralDictionary, Target[index].PantsTemplate)
+			end,
+			["ParticleEmitter"] = function ()
+				table.insert(Dictionaries.ParticleDictionary, Target[index].Texture)
+				table.insert(Dictionaries.GeneralDictionary, Target[index].Texture)
 			end,
 		}
 		if Print then
@@ -141,6 +146,7 @@ function ModuleDictionary:GetDictionary(Target: Instance, Descendants: boolean?,
 		print("Image Buttons:", Dictionaries.ImageButtonDictionary)
 		print("Shirts:", Dictionaries.ShirtDictionary)
 		print("Pants:", Dictionaries.PantsDictionary)
+		print("Particles:", Dictionaries.ParticleDictionary)
 		local EndTime = os.clock()
 		print(`Took: {EndTime - StartTime}`)
 	end
